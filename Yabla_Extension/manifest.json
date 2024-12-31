@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "AutoYabla",
+    "version": "1.6",
+    "description": "Automatically answers questions on a web platform.",
+    "permissions": ["scripting", "activeTab"],
+    
+    
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js", "popup.js"]
+        }
+    ]
+}

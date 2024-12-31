@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Answer Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f2f2f2;
+            width: 200px;
+        }
+        h1 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .start-btn {
+            background-color: #4CAF50;
+        }
+        .stop-btn {
+            background-color: #f44336;
+        }
+        .download-btn {
+            background-color: #2196F3;
+        }
+        .button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Auto Answer</h1>
+    <button id="start" class="button start-btn">Start Answering</button>
+    <button id="stop" class="button stop-btn" disabled>Stop</button>
+    <button id="download" class="button download-btn">Download Transcript</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
