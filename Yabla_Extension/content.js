@@ -1,7 +1,7 @@
 let mclimit, fitblimit, punctuation;
 let isAnswering = false; // Track answering state
-let minDelay = 1500; 
-let maxDelay = 3000; 
+let minDelay = 4000; 
+let maxDelay = 6000; 
 let chanceIncorrect = 5; //out of 100
 
 (function () {
@@ -104,7 +104,14 @@ let chanceIncorrect = 5; //out of 100
         chanceIncorrectContainer.appendChild(chanceIncorrectLabel);
         chanceIncorrectContainer.appendChild(chanceIncorrectInput);
         popup.appendChild(chanceIncorrectContainer);
-        
+        const nextQuestionButton = document.createElement("button");
+nextQuestionButton.innerText = "Next";
+nextQuestionButton.style.marginTop = "10px";
+nextQuestionButton.onclick = () => {
+    const nextButton = document.getElementsByClassName("next")[0];
+    if (nextButton) nextButton.click();
+};
+popup.appendChild(nextQuestionButton);
         document.body.appendChild(popup);
     }
     
